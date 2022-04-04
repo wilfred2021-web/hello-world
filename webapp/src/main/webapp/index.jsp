@@ -31,7 +31,7 @@
     <p>Already have an account in our database? <a href="#">Sign in</a>.</p>
   </div>
 
-   <h1> Thankyou, visit again to learn the course </h1>
+   <h1> Welcome back, visit again to learn the SRE learning course </h1>
 
   
 </form>
