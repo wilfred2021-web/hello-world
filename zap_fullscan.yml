@@ -1,0 +1,14 @@
+dast:
+  image: nrbaskar/hariapp
+  variables:
+    website: "https://demo.testfire.net/"
+    login_url: "https://demo.testfire.net/login.jsp"
+  script:
+    - mkdir /zap/wrk/
+    - /zap/zap-baseline.py -J gl-dast-report.html -t $website \
+        --auth-url $login_url \
+        --auth-username "jsmith" \
+        --auth-password "Demo1234" || true
+    - cp /zap/wrk/gl-dast-report.html .
+  artifacts:
+    paths: [gl-dast-report.html]
